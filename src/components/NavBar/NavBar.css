@@ -1,0 +1,21 @@
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+nav div ul {
+    display: flex;
+}
+
+nav div ul li {
+    margin: 10px;
+    list-style-type: none;
+}
+
+nav div ul li a {
+    color: black;
+}

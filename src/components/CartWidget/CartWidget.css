@@ -1,0 +1,10 @@
+.cart_widget {
+    display: flex;
+    align-items: center;
+    margin: 70px;
+}
+
+.cart_widget img {
+    width: 50px;
+    margin: 25px;
+}
