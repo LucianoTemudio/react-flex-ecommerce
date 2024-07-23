@@ -19,13 +19,13 @@ const ItemList = ({productos, categoria}) => {
                 categoria === 'Todo'?
                 productos.map((element) => {
                     return (
-                        <Item id={element.id} categoria={element.categoria} nombre={element.nombre} image={element.image} unidades={element.unidades}/>
+                        <Item id={element.id} categoria={element.categoria} nombre={element.nombre} image={element.image} precio={element.precio} unidades={element.unidades}/>
                     )
                 })
                 :
                 productosFiltrados.map((element) => {
                     return (
-                        <Item id={element.id} categoria={element.categoria} nombre={element.nombre} image={element.image} unidades={element.unidades}/>
+                        <Item id={element.id} categoria={element.categoria} nombre={element.nombre} image={element.image} precio={element.precio} unidades={element.unidades}/>
                     )
                 })
             }

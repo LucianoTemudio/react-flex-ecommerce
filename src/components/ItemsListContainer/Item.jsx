@@ -8,8 +8,8 @@ const Item = ({id, categoria, nombre, precio, image, unidades}) => {
             <div>{categoria}</div>
             <img className="productos_img" src={image} alt=""></img>
             <div>{nombre}</div>
-            <div>${precio}</div>
-            <div>{unidades}</div>
+            <div>Precio: ${precio}</div>
+            <div>Unidades: {unidades}</div>
             <Link to={`/detalle/${id}`}>
                 <button className="card_button">Detalle</button>
             </Link>

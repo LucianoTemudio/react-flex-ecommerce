@@ -19,7 +19,7 @@ const ItemDetail = ({productos}) => {
     return (
        <div className="cardDetail">        
         <p><strong>Producto seleccionado:</strong></p>
-        <Item id={productoFiltrado.id} categoria={productoFiltrado.categoria} nombre={productoFiltrado.nombre} image={productoFiltrado.image} unidades={productoFiltrado.unidades}/>
+        <Item id={productoFiltrado.id} categoria={productoFiltrado.categoria} nombre={productoFiltrado.nombre} image={productoFiltrado.image} precio={productoFiltrado.precio} unidades={productoFiltrado.unidades}/>
         </div>
     )
 
