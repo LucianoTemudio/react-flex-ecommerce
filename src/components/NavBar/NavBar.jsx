@@ -2,8 +2,9 @@ import React from "react";
 import img_logo from '../../assets/ecommerce_logo.png'
 import './NavBar.css'
 import CartWidget from "../CartWidget/CartWidget";
+import {Link} from 'react-router-dom';
 
-function NavBar () {
+function NavBar ({}) {
     return (
         <nav>
 
@@ -11,8 +12,10 @@ function NavBar () {
 
             <div>
                 <ul>
+                    <Link to={'/'}>
                     <li><a href="">Home</a></li>
-                    <li><a href="">Productos</a></li>
+                    </Link>
+                    
                     <li><a href="">Nosotros</a></li>
                     <li><a href="">Contacto</a></li>
                 </ul>

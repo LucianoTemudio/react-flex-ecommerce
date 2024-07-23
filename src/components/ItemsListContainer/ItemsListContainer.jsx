@@ -1,10 +1,19 @@
 import React from "react";
+import ItemList from "./ItemList";
+import './ItemsListContainer.css'
 
-function ItemsListContainer (props) {
-    const texto = props.texto
+function ItemsListContainer ({productos, categoria}) {
+
     return (
-        <div>
-            <h1>{texto}</h1>
+        <div className="container">
+            {
+                productos.length === 0?
+                <p>Loading</p>
+                :
+                <ItemList productos={productos} categoria={categoria}/>
+
+            }
+            
         </div>
     )
 };

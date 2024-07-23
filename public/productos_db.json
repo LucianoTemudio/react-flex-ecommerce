@@ -1,0 +1,11 @@
+[
+    {"id":1, "categoria":"Beers", "nombre":"Heineken", "precio":2500, "image":"../src/assets/productos/heineken.png", "unidades":0},
+    {"id":2, "categoria":"Beers", "nombre":"Budweiser", "precio":1500, "image":"../src/assets/productos/budweiser.png", "unidades":0},
+    {"id":3, "categoria":"Beers", "nombre":"Estella Galicia", "precio":3000, "image":"../src/assets/productos/estellagalicia.png", "unidades":0},
+    {"id":4, "categoria":"Wines", "nombre":"Luigi Bosca", "precio":15000, "image":"../src/assets/productos/luigibosca.png", "unidades":0},
+    {"id":5, "categoria":"Wines", "nombre":"Rutini", "precio":25000, "image":"../src/assets/productos/rutini.png", "unidades":0},
+    {"id":6, "categoria":"Wines", "nombre":"La Posta", "precio":12000, "image":"../src/assets/productos/laposta.png", "unidades":0},
+    {"id":7, "categoria":"Aperitivos", "nombre":"Fernet Branca", "precio":10000, "image":"../src/assets/productos/fernetbranca.png", "unidades":0},
+    {"id":8, "categoria":"Aperitivos", "nombre":"Gin Bombay", "precio":30000, "image":"../src/assets/productos/ginbombay.png", "unidades":0},
+    {"id":9, "categoria":"Aperitivos", "nombre":"Jagermeister", "precio":35000, "image":"../src/assets/productos/jagermeister.png", "unidades":0}
+]
