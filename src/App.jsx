@@ -20,10 +20,11 @@ function App() {
 
   const [categoria, setCategoria] = useState('Todo');
 
+  
   return (
     <>
       <BrowserRouter>
-        <NavBar setCategoria={setCategoria}/>
+        <NavBar />
         <h2>Seleccione una categoría:</h2>
         <button onClick={(e) => setCategoria(e.target.value)} value="Todo">Todo</button>
         <button onClick={(e) => setCategoria(e.target.value)} value="Beers">Beers</button>

@@ -5,13 +5,7 @@ import { useState, useEffect } from "react";
 
 const ItemList = ({productos, categoria}) => {
 
-    const [productosFiltrados, setProductosFiltrados] = useState(productos);
-
-    useEffect(() => {
-        const temp = productos.filter((element) => element.categoria == categoria)
-        setProductosFiltrados(temp)
-    },[categoria]);
-
+    const productosFiltrados = productos.filter((element) => element.categoria == categoria)
     
     return (
         <div className="cards">
