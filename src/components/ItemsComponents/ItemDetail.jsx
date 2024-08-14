@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Item from "./Item";
 import './ItemDetail.css'
+import {useAppContext} from "../Context/Context";
 
-const ItemDetail = ({productos}) => {
+const ItemDetail = () => {
 
+    const {productos} = useAppContext();
     const params = useParams();
 
     const [productoFiltrado, setProductoFiltrado] = useState([])

@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ItemList from "./ItemList";
 import './ItemsListContainer.css'
+import {useAppContext} from "../Context/Context";
 
-function ItemsListContainer ({productos, categoria}) {
+function ItemsListContainer ({categoria}) {
+
+    const {productos, loadData} = useAppContext();
+
+    useEffect(() => {
+        loadData();
+    },[]);
 
     return (
         <div className="container">

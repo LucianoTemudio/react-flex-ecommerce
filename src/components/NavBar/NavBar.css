@@ -20,3 +20,14 @@ nav div ul li {
 nav div ul li a {
     color: black;
 }
+
+.intro_categorias {
+    margin-left: 50px;
+    color: crimson;
+}
+
+.button_style {
+    margin-left: 10px;
+    color: white;
+    background-color: crimson;
+}

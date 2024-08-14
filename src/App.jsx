@@ -1,43 +1,36 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
-import ItemsListContainer from './components/ItemsListContainer/ItemsListContainer'
-import fetchData from './fetchdata'
+import ItemsListContainer from './components/ItemsComponents/ItemsListContainer'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import NotFound from './components/NotFound/NotFound'
-import ItemDetail from './components/ItemsListContainer/ItemDetail'
+import ItemDetail from './components/ItemsComponents/ItemDetail'
+import {ContextProvider} from './components/Context/Context'
+import Cart from './components/Cart/Cart'
+import Nosotros from './components/NavBar/Nosotros'
+import Contacto from './components/NavBar/Contacto'
 
 function App() {
 
-
-  const [productos, setProductos] = useState([]);
-
-  useEffect(() => {
-    fetchData()
-    .then(response => {setProductos(response)})
-    .catch(err => console.error(err));
-  })
-
   const [categoria, setCategoria] = useState('Todo');
-
   
   return (
     <>
-      <BrowserRouter>
-        <NavBar />
-        <h2>Seleccione una categoría:</h2>
-        <button onClick={(e) => setCategoria(e.target.value)} value="Todo">Todo</button>
-        <button onClick={(e) => setCategoria(e.target.value)} value="Beers">Beers</button>
-        <button onClick={(e) => setCategoria(e.target.value)} value="Wines">Wines</button>
-        <button onClick={(e) => setCategoria(e.target.value)} value="Aperitivos">Aperitivos</button>
-        <Routes>
-          <Route path='/' element={<ItemsListContainer productos={productos} categoria={categoria}/>} />
-          <Route path='/detalle/:id' element={<ItemDetail productos={productos} />} />
-          <Route path='/*' element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <ContextProvider>
+        <BrowserRouter>
+          <NavBar setCategoria={setCategoria}/>
+          <Routes>
+            <Route path='/' element={<ItemsListContainer categoria={categoria}/>} />
+            <Route path='/nosotros' element={<Nosotros />} />
+            <Route path='/contacto' element={<Contacto />} />
+            <Route path='/detalle/:id' element={<ItemDetail />} />
+            <Route path='/carrito' element={<Cart />} />
+            <Route path='/*' element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </ContextProvider>
     </>
-  )
+  );
 };
 
 export default App;
