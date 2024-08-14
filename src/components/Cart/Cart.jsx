@@ -2,6 +2,8 @@ import {React, setState, useState} from "react";
 import { useAppContext } from "../Context/Context";
 import './Cart.css'
 import {addDoc} from "firebase/firestore"
+import Swal from 'sweetalert2'
+
 
 const Cart = () => {
 
@@ -35,7 +37,10 @@ const Cart = () => {
             setCarrito([]);
             e.target[0].value = ''
             e.target[1].value = ''
-        } else {alert("No hay productos en el carrito.");}
+        } else {
+            Swal.fire("No hay productos en el carrito!");
+
+        }
     };
 
 
